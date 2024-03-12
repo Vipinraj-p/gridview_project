@@ -191,8 +191,8 @@ class _GridViewPageState extends State<GridViewPage> {
                 width: double.infinity,
                 height: 500,
                 child: GridView.extent(
-                  maxCrossAxisExtent: 150,
-                  crossAxisSpacing: 10,
+                  maxCrossAxisExtent: 250,
+                  mainAxisSpacing: 40,
                   children: [
                     InkWell(
                         onTap: () {
@@ -202,13 +202,35 @@ class _GridViewPageState extends State<GridViewPage> {
                                 builder: (context) => Premalu(),
                               ));
                         },
-                        child:
-                            Image.asset("Images/Malayalm_Movies/premalu.jpg")),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "Images/Malayalm_Movies/premalu.jpg",
+                              height: 170,
+                            ),
+                            Text("Premalu")
+                          ],
+                        )),
                     InkWell(
                         onTap: () {},
-                        child: Image.asset(
-                            "Images/Malayalm_Movies/manjummel-boys.jpg")),
-                    Image.asset("Images/Malayalm_Movies/thankaman.jpg")
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "Images/Malayalm_Movies/manjummel-boys.jpg",
+                              height: 170,
+                            ),
+                            Text("Manjummel Boys")
+                          ],
+                        )),
+                    Column(
+                      children: [
+                        Image.asset(
+                          "Images/Malayalm_Movies/thankaman.jpg",
+                          height: 170,
+                        ),
+                        Text("Thankamani")
+                      ],
+                    )
                   ],
                 ),
               )
