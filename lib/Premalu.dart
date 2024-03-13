@@ -71,9 +71,20 @@ class _PremaluState extends State<Premalu> {
               )),
           Padding(
             padding: const EdgeInsets.only(left: 30, top: 50),
-            child: Text(
-              "Cast",
-              style: TextStyle(fontSize: 28),
+            child: Row(
+              children: [
+                Text(
+                  "Cast",
+                  style: TextStyle(fontSize: 28),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  "GridView.custom",
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                ),
+              ],
             ),
           ),
           Padding(
